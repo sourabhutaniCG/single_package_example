@@ -10,10 +10,14 @@ on:
 
 permissions:
   contents: read # TODO: remove this when moving the repo to public
+  security-events: write
 
 jobs:
   check_workflows:
     name: Check workflows
+    permissions:
+      contents: read
+      security-events: write
     uses: ./.github/workflows/check_workflows.yml
   get_package_names:
     name: Get package names
