@@ -1,5 +1,5 @@
 [project]
-name = "example_package"
+name = "single_package_example"
 description = "This package is only to demonstrate repo structure."
 license = "MIT"
 keywords = ["example_package", "NI"]
