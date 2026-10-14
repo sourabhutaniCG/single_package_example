@@ -1,5 +1,5 @@
 {
-    "example_package": {
+    "single_package_example": {
         "package-basepath": "."
     }
 }

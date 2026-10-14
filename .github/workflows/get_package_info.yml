@@ -49,8 +49,8 @@ jobs:
             exit 1
           fi
 
-          package_basepath=$(echo $info | jq -r '.package-basepath')
-          install_extras=$(echo $info | jq -r '.install-extras')
+          package_basepath=$(echo $info | jq -r '."package-basepath"')
+          install_extras=$(echo $info | jq -r '."install-extras"')
 
           should_check_docs=false
           if [ -d "${package_basepath}/docs" ]; then

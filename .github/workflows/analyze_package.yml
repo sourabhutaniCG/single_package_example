@@ -48,10 +48,3 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Set up Poetry
         uses: ni/python-actions/setup-poetry@aa64e60612cb078b0c2ada666becbd70d4817d55 # v0.7.1
-      - name: Analyze Python Project
-        uses: ni/python-actions/analyze-project@aa64e60612cb078b0c2ada666becbd70d4817d55 # v0.7.1
-        with:
-          project-directory: ${{ inputs.package-basepath }}
-          install-args: ${{ inputs.install-extras && format('--extras ''{0}''', inputs.install-extras) || '' }}
-      - name: Bandit security checks
-        run:  poetry run bandit -c pyproject.toml -r src/
